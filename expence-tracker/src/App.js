@@ -13,15 +13,15 @@ import {GlobalProvider} from './context/GlobalState'
 
 const App = () => {
   return ( <GlobalProvider>
-        <div className='App'>
-          <Header/>
-            <div className='container'>
-              <Balance/>
-              <IncomeExpenses/>
-              <TransactionList/>
-              <AddTransaction/>
+              <Header/>
+              <div className='d-flex justify-content-center'>
+                <div>
+                  <Balance/>
+                  <IncomeExpenses/>
+                  <TransactionList/>
+                  <AddTransaction/>
+                </div>
             </div>
-        </div>
         </GlobalProvider>
   );
 }

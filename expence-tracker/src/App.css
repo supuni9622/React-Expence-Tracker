@@ -2,14 +2,18 @@ body{
   background-color: lightgoldenrodyellow;
 }
 
-.App {
-  text-align: center;
-}
-
 #money-plus {
   color: rgb(0, 211, 0)
 }
 
 #money-minus{
   color: rgb(255, 24, 24)
+}
+
+.minus{
+  border-right: 3px solid rgb(199, 0, 0);
+}
+
+.plus{
+  border-right: 3px solid rgb(28, 163, 28);
 }
