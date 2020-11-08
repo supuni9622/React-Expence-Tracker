@@ -14,7 +14,7 @@ const TransactionList = () => {
     
     return (
         <>
-            <h3>History</h3>
+            <h3 className='my-3'>History</h3>
             <ListGroup variant="flush">
                 {
                     transactions.map(transaction => ( <Transactions key={transaction.id} transaction={transaction}/> ))
