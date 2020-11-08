@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
-import { ListGroup, Button}  from 'react-bootstrap'
+import { ListGroup}  from 'react-bootstrap'
 import {GlobalContext} from '../context/GlobalState'
+
+import Transactions from './Transactions'
 
 const TransactionList = () => {
 
@@ -15,10 +17,7 @@ const TransactionList = () => {
             <h3>History</h3>
             <ListGroup variant="flush">
                 {
-                    transactions.map(transaction => ( <ListGroup.Item >
-                        {transaction.text} <span>{transaction.amount}</span> 
-                        <Button variant='danger'>X</Button>
-                    </ListGroup.Item>))
+                    transactions.map(transaction => ( <Transactions key={transaction.id} transaction={transaction}/> ))
                 }
             </ListGroup>
         </>
