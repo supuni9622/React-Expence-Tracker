@@ -1,4 +1,4 @@
-import React, {Children, createContext, useReducer} from 'react'
+import React, {createContext, useReducer} from 'react'
 import AppReducer from './AppReducer'
 
 // Initial state
@@ -20,7 +20,19 @@ export const GlobalContext = createContext(initialState)
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
-    return(<GlobalContext.Provider value={{transactions: state.transactions}}>
+    // Actions
+    const deleteTransaction = (id) => {
+        //dispatch method pass object which includes type and payload
+        dispatch({
+            type: 'DELETE_TRANSACTION',
+            payload:id //any data we want to send
+        })
+    }
+
+    return(<GlobalContext.Provider value={{
+        transactions: state.transactions,
+        deleteTransaction
+        }}>
         {children}
     </GlobalContext.Provider>)
 }
