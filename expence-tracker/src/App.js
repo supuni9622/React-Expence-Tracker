@@ -12,18 +12,17 @@ import AddTransaction from './components/AddTransaction'
 import {GlobalProvider} from './context/GlobalState'
 
 const App = () => {
-  return (
-    <GlobalProvider>
-      <div className="App">
-        <Header/>
-          <div className='container'>
-            <Balance/>
-            <IncomeExpenses/>
-            <TransactionList/>
-            <AddTransaction/>
+  return ( <GlobalProvider>
+        <div className='App'>
+          <Header/>
+            <div className='container'>
+              <Balance/>
+              <IncomeExpenses/>
+              <TransactionList/>
+              <AddTransaction/>
+            </div>
         </div>
-      </div>
-    </GlobalProvider>
+        </GlobalProvider>
   );
 }
 
