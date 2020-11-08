@@ -10,6 +10,12 @@ const AppReducer = (state,action) => {
                 ...state, // by spread operator send the current state
                 transactions: state.transactions.filter(transaction => transaction.id !== action.payload)  
             }
+        
+        case 'ADD_TRANSACTION':
+            return {
+                ...state,
+                transactions : [...state.transactions, action.payload] // Here we set array and get initial transaction and new transaction comming from our payload
+            }
 
         default: 
             return state
